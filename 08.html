@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora básica</title>
+</head>
+<body>
+    <h1>Calculadora básica</h1>
+    <section>
+        <h2>Digite os números, escolha a operação e clique para ver o resultado</h2>
+        <form id="calculator">
+            <input type="number" required style="width: 80px;height: 40px;font-size: 20px;text-align: center;">
+            <select name="operator" id="operator" style="width: 80px;font-size: 20px;text-align: center;">
+                <option value="soma">+</option>
+                <option value="subtrai">-</option>
+                <option value="multiplica">*</option>
+                <option value="divide">/</option>
+            </select>
+            <input type="number" required style="width: 80px;height: 40px;font-size: 20px;text-align: center;">
+            <button>Ver resultado</button>
+        </form>
+    </section>
+    <section>
+        <h2>Resultado</h2>
+        <div id="result" style="font-size: 32px;color: blue;border: 1px solid black;width: 80px;height: 80px;display: flex;justify-content: center;align-items: center;"></div>
+    </section>
+
+    <script>
+        function showResult(e) {
+            e.preventDefault();
+            const [x, y] = document.querySelectorAll('input');
+            const operator = document.getElementById('operator');
+            const result = document.getElementById('result');
+
+            result.innerText = compute(
+                parseFloat(x.value),
+                parseFloat(y.value),
+                operator.value
+            );            
+        }
+
+        function compute(x, y, operator) {
+            switch (operator) {
+                case 'soma':
+                    return x+y;
+                    break;
+                case 'subtrai':
+                    return x-y;
+                    break;
+                case 'multiplica':
+                    return x*y;
+                    break;
+                case 'divide':
+                    return (x/y).toFixed(2);
+                    break;
+            }
+        }
+
+        document.getElementById('calculator').addEventListener('submit', (e) => showResult(e));
+    </script>
+</body>
+</html>

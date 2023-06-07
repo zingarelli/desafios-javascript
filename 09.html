@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de tarifa</title>
+</head>
+<body>
+    <h1>Calculador de tarifa</h1>
+    <section>
+        <h2>Informe sua idade e selecione se é estudante</h2>
+        <form id="calculator">
+            <label for="age">Idade</label>
+            <input id="age" type="number" min="0" required style="width: 80px">
+            <br><br>
+            <input type="checkbox" name="student" id="student">
+            <label for="student">Sou estudante</label>
+            <br><br>
+            <button>Calcular tarifa</button>
+        </form>
+    </section>
+    <hr>
+    <section>
+        <h2>Valor da tarifa</h2>
+        <div id="result" style="font-size: 32px;color: blue;border: 1px solid black;width: 120px;height: 80px;display: flex;justify-content: center;align-items: center;"></div>
+    </section>
+
+    <script>
+        function showResult(e) {
+            e.preventDefault();
+            const age = parseInt(document.getElementById('age').value);
+            const isStudentChecked = document.getElementById('student').checked;
+            const result = document.getElementById('result');
+
+            result.innerText = computeFee(age, isStudentChecked);            
+        }
+
+        function computeFee(age, isStudent) {
+            const fee = 2.5;
+
+            if (isFreeFee(age)) return "Grátis";
+
+            // vou dar precedência a ser estudante ao invés de idoso, porque o desconto é maior
+            if (isStudent) return fee * 0.5;
+
+            if (isElder(age)) return fee * 0.7;
+
+            return fee.toFixed(2);
+        }
+
+        function isFreeFee(age) {
+            if (age <= 6) return true;
+            return false;
+        }
+
+        function isElder(age) {
+            if (age >= 60) return true;
+            return false;
+        }
+
+        document.getElementById('calculator').addEventListener('submit', (e) => showResult(e));
+    </script>
+</body>
+</html>
