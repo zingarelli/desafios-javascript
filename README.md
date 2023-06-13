@@ -108,3 +108,25 @@ Receba/armazene um número `N` e exiba a sequência de Fibonacci até `N`.
 ### 15 - Par ou ímpar
 
 Crie uma função que recebe um valor `N` como argumento e verifica se é par ou ímpar. Imprima o resultado na tela.
+
+### 16 - Fatorial
+
+Crie uma função que retorne o fatorial de um número, passado como parâmetro. Imprima o resultado na tela.
+
+### 17 - Máximo e mínimo
+
+Crie duas funções. Ambas irão receber dois número, `N` e `M`, como argumentos. Uma deve retornar o maior valor entre os dois números. A outra deve retornar o menor valor. Imprima os resultados na tela.
+
+### 18 - Inversão de string
+
+Crie uma função que recebe uma string e retorna seu inverso. Imprima o resultado na tela.
+
+### 19 - Contagem de vogais
+
+Crie uma função que recebe uma string e retorna a quantidade de vogais no texto recebido. Imprima o resultado na tela.
+
+### 20 - Palíndromo
+
+Crie uma função que identifica se uma palavra ou frase é palíndromo.
+
+> Palíndromo: frase ou palavra que, quando lida em ordem reversa, obtém-se a mesma frase ou palavra.
