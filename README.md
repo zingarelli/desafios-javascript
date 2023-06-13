@@ -64,7 +64,7 @@ Faça uma calculadora básica, que recebe dois números e a operação entre ele
 
 Utilize o **switch** para armazenar a operação escolhida.
 
-*Observação: fiz a resolução deste exercício e dos próximos em um arquivo HTML, para variar um pouco.*
+*Observação: fiz a resolução deste exercício e do próximo em um arquivo HTML, para variar um pouco.*
 
 ### 09 - Cálculo de tarifas.
 
@@ -79,5 +79,32 @@ O valor básico é R$2,50. Esse valor é alterado de acordo com a regra a seguir
 
 ### 10 - Somatório 1 a N
 
-Receba/armazene um valor `N` e exiba o resultado da soma de 1 até `N`
+Receba/armazene um valor `N` e exiba o resultado da soma de 1 até `N`.
 
+O desafio deve ser feito utilizando estruturas de repetição. 
+
+### 11 - Tabuada
+
+Receba/armazena um número `N` e exiba a tabuada desse número, de 1 até 10.
+
+O desafio deve ser feito utilizando estruturas de repetição. 
+
+### 12 - Números primos
+
+Receba/armazene um valor `N` e exiba todos os números primos de 1 até `N`.
+
+O desafio deve ser feito utilizando estruturas de repetição. 
+
+### 13 - Padrão de asteriscos
+
+Faça um código que recebe/armazena um valor `N` e exibe um padrão de asteriscos (`*`) até esse valor. 
+
+O padrão é: um asterisco na linha 1, dois asteriscos na linha 2, ..., `N` asteriscos na linha `N`.
+
+### 14 - Fibonacci
+
+Receba/armazene um número `N` e exiba a sequência de Fibonacci até `N`.
+
+### 15 - Par ou ímpar
+
+Crie uma função que recebe um valor `N` como argumento e verifica se é par ou ímpar. Imprima o resultado na tela.
