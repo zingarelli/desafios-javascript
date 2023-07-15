@@ -130,3 +130,60 @@ Crie uma função que recebe uma string e retorna a quantidade de vogais no text
 Crie uma função que identifica se uma palavra ou frase é palíndromo.
 
 > Palíndromo: frase ou palavra que, quando lida em ordem reversa, obtém-se a mesma frase ou palavra.
+
+### 21 - Array de números aleatórios
+
+Crie uma função que gera um array de números aleatórios. A função recebe como argumento: tamanho do array, valor mínimo e valor máximo dos números.
+
+### 22 - Elemento mais frequente
+
+Crie uma função que recebe um array como argumento e retorna o elemento que mais aparece no array.
+
+### 23 - Remoção de elementos repetidos
+
+Crie um programa que recebe um array, remove os elementos que estiverem repetidos e retorna um array sem essas repetições.
+
+### 24 - Concatenar arrays
+
+Receba dois arrays e retorne um novo array que é a união de todos os elementos dos arrays anteriores.
+
+Exemplo:
+
+    Entrada: [0, 1, 2] e [1, 2, 3]
+    Saída: [0, 1, 2, 1, 2, 3]
+
+### 25 - Interseção de arrays
+
+Receba dois arrays e retorne um novo array com os elementos que os dois arrays anteriores têm em comum.
+
+### 26 - Média dos elementos
+
+Crie um programa que recebe um array numérico e retorna a média dos valores desses elementos.
+
+### 27 - Soma de propriedades de um objeto
+
+Seu programa irá receber um objeto com diversas propriedades contendo valores numéricos. Você deve retornar a soma dos valores dessas propriedades.
+
+### 28 - Filtrando propriedades
+
+Faça um programa que exiba somente as propriedades de um objeto que o usuário desejar.
+
+Seu programa irá receber um objeto e um array contendo as propriedades desejadas. 
+
+Extra: faça uma verificação se a propriedade passada no array existe no objeto.
+
+### 29 - União de objetos
+
+Seu programa irá receber dois objetos com propriedades variadas. Você deve retornar um novo objeto que contenha todas as propriedades dos dois objetos anteriores.
+
+Dúvida: e se os objetos possuírem uma mesma propriedade? 
+
+- Não tratei este caso. O comportamento do JS é sobrescrever a propriedade caso você passe um novo valor para a propriedade que já existe.
+
+- Uma solução seria incluir os valores em um array, quando a propriedade já existe.
+
+### 30 - Manipulando DOM 
+
+Este e os próximos exercícios serão manipulação de DOM, então estarão em um arquivo HTML com o JavaScript incluso ao final da tag `body`
+
+Para o desafio 30, você deve criar um arquivo HTML contendo uma tag `h1` e um texto dentro dela. Usando JavaScript, você deve alterar o texto de `h1`.
