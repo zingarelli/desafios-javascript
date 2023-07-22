@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 33</title>
+</head>
+
+<body>
+    <ul class="list">
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+    </ul>
+    <button>Add new item</button>
+    <script>
+        function addItem() {
+            const newItem = document.createElement('li');
+            newItem.innerText = 'new item';
+            
+            document.querySelector('.list').appendChild(newItem)
+        }
+
+        document.querySelector('button').addEventListener('click', addItem)
+    </script>
+</body>
+
+</html>

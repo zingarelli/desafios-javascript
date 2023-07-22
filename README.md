@@ -187,3 +187,23 @@ Dúvida: e se os objetos possuírem uma mesma propriedade?
 Este e os próximos exercícios serão manipulação de DOM, então estarão em um arquivo HTML com o JavaScript incluso ao final da tag `body`
 
 Para o desafio 30, você deve criar um arquivo HTML contendo uma tag `h1` e um texto dentro dela. Usando JavaScript, você deve alterar o texto de `h1`.
+
+### 31 - Alterando CSS
+
+Crie uma página com vários parágrafos e altere a cor de todos eles de uma vez, utilizando JavaScript.
+
+### 32 - Alternar classes
+
+Crie uma div que recebe um estilo de `background-color`. Crie também um botão que, ao ser clicado, adiciona ou remove uma classe a essa div. Essa classe adicional deve alterar o `background-color` da div. 
+
+### 33 - Adicionar elementos
+
+Crie uma página com várias `li`s e um botão. Ao ser pressionado, o botão deve criar uma nova `li`.
+
+### 34 - Remover elementos
+
+Aproveitando a página criada no desafio 33, adicione um evento de click aos `li`s para que sejam removidos quando clicados.
+
+### 35 - Filtro por palavra
+
+Faça uma página que possui uma lista de palavras e um input. Ao digitar uma palavra no input, mantenha somente os itens que coincidem com a palavra digitada.

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 35</title>
+</head>
+
+<body>
+    <input type="text" oninput="filterUsingDisplay(this.value)" placeholder="Filtrar por nome (gabarito)">
+    <br /><br />
+    <input type="text" oninput="filterByKeyword(this.value)" placeholder="Filtrar por nome">
+    <!-- list created by chatGPT -->
+    <ul class="list">
+        <li>Gato</li>
+        <li>Cachorro</li>
+        <li>Rato</li>
+        <li>Cavalo</li>
+        <li>Coelho</li>
+        <li>Gato</li>
+        <li>Elefante</li>
+        <li>Cachorro</li>
+        <li>Leão</li>
+        <li>Girafa</li>
+        <li>Macaco</li>
+        <li>Gato</li>
+        <li>Tigre</li>
+        <li>Gato</li>
+        <li>Urso</li>
+    </ul>
+    <script>
+        // backup of the original list, so we don't lose
+        // any items when the list is updated by a filter
+        const originalList = Array.from(document.querySelector('.list').children);
+
+        const filterByKeyword = (value) => {
+            // copy the original list
+            const list = [...originalList];
+
+            // filtered items will be added to this fragment
+            // Later on, this fragment will be used to replace the children 
+            // of the list in the HTML document
+            const filteredList = document.createDocumentFragment();
+
+            // filter the desired elements
+            list.forEach(item => {
+                const itemInList = item.innerText.toLowerCase();
+                const keyword = value.toLowerCase();
+                if(itemInList.includes(keyword)){
+                    filteredList.appendChild(item)
+                }
+            });
+
+            // update the HTML with the filtered list
+            document.querySelector('.list').replaceChildren(filteredList);
+        }
+
+        // gabarito do instrutor, usando display: none nos li's 
+        // que não passarem no filtro
+        const filterUsingDisplay = (value) => {
+            console.log(value)
+            const items = document.querySelector('.list').querySelectorAll('li');
+            console.log(items)
+            items.forEach(item => item.style.display = item.innerText.toLowerCase().includes(value.toLowerCase()) ? '' : 'none')
+        }
+    </script>
+</body>
+
+</html>

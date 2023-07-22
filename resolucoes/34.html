@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 34</title>
+</head>
+
+<body>
+    <ul class="list">
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+    </ul>
+    <button>Add new item</button>
+    <script>
+        function addItem() {
+            const newItem = document.createElement('li');
+            newItem.innerText = 'new item';
+            newItem.addEventListener('click', (e) => removeItem(e.target));
+            document.querySelector('.list').appendChild(newItem)            
+        }
+
+        function removeItem(item) {
+            // access parent and then remove itself
+            item.parentNode.removeChild(item);
+        }
+
+        function addNewEventToAll(element, typeOfEvent, callbackFn) {
+            document.querySelectorAll(element).forEach(item => {
+                item.addEventListener(
+                    typeOfEvent, 
+                    (e) => callbackFn(e.target)
+                );
+            })
+        }
+
+        function addNewEvent(element, typeOfEvent, callbackFn) {
+            document.querySelector(element).addEventListener(typeOfEvent, callbackFn);
+        }
+
+        addNewEvent('button', 'click', addItem);
+        addNewEventToAll('li', 'click', removeItem);
+    </script>
+</body>
+
+</html>
