@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 36</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 25px;
+        }
+
+        li {
+            cursor: pointer;
+            padding: 5px 0;
+        }
+
+        .selected {
+            background-color: chocolate;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="list">
+        <li>Gato</li>
+        <li>Cachorro</li>
+        <li>Rato</li>
+        <li>Cavalo</li>
+        <li>Coelho</li>
+        <li>Elefante</li>
+        <li>Leão</li>
+    </ul>
+    <div class="controls">
+        <button onclick="onButtonUp()">☝️</button>
+        <button onclick="onButtonDown()">👇</button>
+    </div>
+    <script>
+        const onItemSelected = (e) => {
+            const itemClicked = e.target;
+            const parent = itemClicked.parentElement;
+
+            // element.style.backgroundColor = '#fdfdfd';
+            // clean the background-color of all items
+            Array.from(parent.children).forEach(item => item.classList.remove('selected'));
+
+            // add selected class to the current clicked item
+            itemClicked.classList.add('selected');
+        }
+
+        const onButtonUp = () => {
+            const parent = document.querySelector('.list');
+            const items = parent.children;
+            for (let i = 0; i < items.length; i++) {
+                const element = items[i];
+                if (element.classList.contains('selected')) {
+                    if (i > 0) {
+                        const previousElement = items[i - 1];
+                        parent.insertBefore(element, previousElement);
+                    }
+                }
+            }
+        }
+
+        const onButtonDown = () => {
+            const parent = document.querySelector('.list');
+            const items = parent.children;
+            for (let i = 0; i < items.length; i++) {
+                const element = items[i];
+                if (element.classList.contains('selected')) {
+                    if (i < items.length - 1) {
+                        const nextElement = items[i + 1];
+                        parent.insertBefore(nextElement, element);
+                        // Advance to the next element.
+                        // This prevents continuously shifting the 
+                        // clicked element with the next element
+                        i++;
+                    }
+                }
+            }
+        }
+
+        document.querySelectorAll('li').forEach(item => item.addEventListener('click', onItemSelected));
+    </script>
+</body>
+
+</html>

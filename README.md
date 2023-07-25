@@ -184,7 +184,7 @@ Dúvida: e se os objetos possuírem uma mesma propriedade?
 
 ### 30 - Manipulando DOM 
 
-Este e os próximos exercícios serão manipulação de DOM, então estarão em um arquivo HTML com o JavaScript incluso ao final da tag `body`
+Este e os próximos exercícios (até o 38) serão manipulação de DOM, então estarão em um arquivo HTML com o JavaScript incluso ao final da tag `body`
 
 Para o desafio 30, você deve criar um arquivo HTML contendo uma tag `h1` e um texto dentro dela. Usando JavaScript, você deve alterar o texto de `h1`.
 
@@ -207,3 +207,46 @@ Aproveitando a página criada no desafio 33, adicione um evento de click aos `li
 ### 35 - Filtro por palavra
 
 Faça uma página que possui uma lista de palavras e um input. Ao digitar uma palavra no input, mantenha somente os itens que coincidem com a palavra digitada.
+
+### 36 - Mover elementos
+
+Crie uma página com uma lista de itens e dois botões. Adicione as seguintes funcionalidades a esta página:
+
+- ao clicar em um item, altere a cor de fundo dele, para indicar que foi selecionado;
+- ao pressionar o primeiro botão, mova o item selecionado para cima;
+- ao pressionar o segundo botão, mova o item selecionado para baixo.
+
+### 37 - Modal
+
+Crie um botão e uma `div`. Coloque algum conteúdo de texto na `div` e um botão/ícone de fechar. 
+
+O conteúdo da `div` deverá aparecer na tela somente quando o botão é clicado. 
+
+A `div` deverá sair da tela quando a pessoa clicar fora da área da `div` ou em seu botão de fechar.
+
+*Observação*: fiz a resolução utilizando o elemento `dialog` ao invés de `div`. O `dialog` é um elemento HTML específico para este tipo de interação com modal.
+
+### 38 - Accordion
+
+Crie um "accordion". 
+
+Um accordion é uma lista de itens, em que cada item é composto por um título e um conteúdo. 
+
+- Somente os títulos são exibidos na tela, ficando seu respectivo conteúdo oculto. 
+
+- Quando um título é clicado, aí então seu respectivo conteúdo exibido. 
+
+- Somente o conteúdo do título clicado deve ser exibido, ou seja, ao clicar em outro título, o conteúdo do anterior deve ficar novamente oculto e o atual deve ser exibido.
+
+### 39 - Temporizador personalizado
+
+A partir deste exercício, voltamos a utilizar somente JS, para trabalhar com desafios envolvendo assincronicidade.
+
+Para este exercício, crie uma função que recebe dois argumentos: um valor em segundos e uma segunda função (função callback). Sua função deve executar este callback após passado o tempo em segundos.
+
+### 40 - Clone do `Array.map()`
+
+Crie uma função que recebe dois argumentos: um array e uma função callback. Este callback será uma função de transformação, que irá realizar alguma operação (por exemplo, dobra o valor de um elemento passado como argumento).
+
+Sua função deve aplicar essa função de transformação em cada elemento do array e retornar um novo array com esse resultado.
+

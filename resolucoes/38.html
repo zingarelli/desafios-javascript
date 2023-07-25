@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 38</title>
+    <style>
+        .item {
+            list-style: none;
+            border: 1px solid black;
+            width: fit-content;
+            padding: 10px 15px;
+            margin-bottom: 15px;            
+        }
+        .title {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="item">
+            <h2 class="title">Item 1</h2>
+            <p class="content">Texto 1 Texto 1 Texto 1 Texto 1 Texto 1 </p>
+        </li>
+        <li class="item">
+            <h2 class="title">Item 2</h2>
+            <p class="content">Texto 2 Texto 2 Texto 2 Texto 2 Texto 2 </p>
+        </li>
+        <li class="item">
+            <h2 class="title">Item 3</h2>
+            <p class="content">Texto 3 Texto 3 Texto 3 Texto 3 Texto 3 </p>
+        </li>
+        <li class="item">
+            <h2 class="title">Item 4</h2>
+            <p class="content">Texto 4 Texto 4 Texto 4 Texto 4 Texto 4 </p>
+        </li>
+        <li class="item">
+            <h2 class="title">Item 5</h2>
+            <p class="content">Texto 5 Texto 5 Texto 5 Texto 5 Texto 5 </p>
+        </li>
+    </ul>
+    <script>
+        const titleList = document.querySelectorAll('.title');
+        const contentList = document.querySelectorAll('.content');
+
+        function showContent(e) {
+            // hide any content open
+            hideAllContent()
+
+            // open content for the clicked title
+            e.target.parentElement.querySelector('.content').style.display = 'block';
+        }
+
+        function hideAllContent() {
+            contentList.forEach(content => content.style.display = 'none')
+        }
+
+        titleList.forEach(item => {
+            item.addEventListener('click', showContent)
+        });
+
+        hideAllContent();
+       
+    </script>
+</body>
+
+</html>

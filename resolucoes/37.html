@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 37</title>
+    <style>
+        .modal {
+            padding: 0;
+        }
+        .modal__content {
+            padding: 1em;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="openModal()" class="openModal">Mostrar conteúdo</button>
+    <dialog class="modal">
+        <div class="modal__content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui dignissimos perferendis, minima saepe totam
+                excepturi repellendus suscipit sed nihil placeat quidem alias provident distinctio ratione esse consectetur
+                tempora necessitatibus incidunt.</p>
+            <button onclick="closeModal()">&times;</button>
+        </div>
+    </dialog>
+    <script>
+        const modalContainer = document.querySelector('.modal');
+        const modalContent = document.querySelector('.modal__content');
+
+        const openModal = () => modalContainer.showModal();
+
+        const closeModal = () => modalContainer.close();
+
+        // close modal when clicking outside of it
+        modalContainer.addEventListener('click', (e) => {
+            // check if the click happened inside the modal content
+            if (e.target.closest('.modal__content') !== modalContent) {
+                modalContainer.close();
+            }
+        })
+
+    </script>
+</body>
+
+</html>
