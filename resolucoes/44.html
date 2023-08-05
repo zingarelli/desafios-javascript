@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 44</title>
+</head>
+
+<body>
+    <script>
+        const blog = [
+            'https://jsonplaceholder.typicode.com/posts/1',
+            'https://jsonplaceholder.typicode.com/posts/2',
+            'https://jsonplaceholder.typicode.com/posts/3',
+            'https://jsonplaceholder.typicode.com/posts/4',
+            'https://jsonplaceholder.typicode.com/posts/5',
+        ]
+
+        function getAllPosts(source) {
+            const promises = [];
+            const results = [];
+            source.forEach(post => {
+                promises.push(fetch(post))
+            })
+            Promise.all(promises)
+                .then(response => 
+                    response.forEach(result =>  
+                        result.json()
+                            .then(data => results.push(data))))
+                .catch(err => console.log(err))
+            return results;
+        }
+        
+        console.log(getAllPosts(blog));
+    </script>
+</body>
+
+</html>

@@ -240,7 +240,7 @@ Um accordion é uma lista de itens, em que cada item é composto por um título 
 
 ### 39 - Temporizador personalizado
 
-A partir deste exercício, voltamos a utilizar somente JS, para trabalhar com desafios envolvendo assincronicidade.
+A partir deste exercício, voltamos a utilizar somente JS, para trabalhar com desafios envolvendo funções callback e assincronicidade.
 
 Para este exercício, crie uma função que recebe dois argumentos: um valor em segundos e uma segunda função (função callback). Sua função deve executar este callback após passado o tempo em segundos.
 
@@ -250,3 +250,34 @@ Crie uma função que recebe dois argumentos: um array e uma função callback. 
 
 Sua função deve aplicar essa função de transformação em cada elemento do array e retornar um novo array com esse resultado.
 
+### 41 - Execução condicional com callbacks
+
+Crie uma função que recebe três funções de callback como argumento. O primeiro argumento é um callback que verifica uma condição. O segundo argumento é um callback que será executado caso a verificação retorne verdadeiro. Já o terceiro argumento é um callback a ser executado caso a verificação retorne falso.
+
+### 42 - Simulação de resposta de API
+
+Crie uma função que irá simular uma resposta a uma API. Esta função recebe um valor e um tempo em milissegundos, e deve retornar uma Promise que devolve o valor após decorrido o tempo.
+
+*Extra*: crie uma função assíncrona que chama a função anteriormente criada e imprime na tela o valor após a Promise ser resolvida.
+
+### 43 - Retorno de dados com fetch
+
+Crie uma função que recebe uma URL como parâmetro e retorna uma promise com os dados dessa URL.
+
+*Nota*: a função `fetch()` não está disponível por padrão no Node.js. Então, caso utilize esta função, lembre de rodar seu script em uma página HTML.
+
+### 44 - Cadeia de Promises
+
+Você terá uma função que recebe como parâmetro um array com várias URLs. A função deverá fazer fetch para cada uma das URLs, em sequência, e reunir o resultado delas em um novo array, a ser devolvido como retorno da função.
+
+### 45 - Retry com Promises
+
+Crie uma função que irá fazer uma chamada a uma API um número `X` de tentativas, com um delay `Y` a cada tentativa mal sucedida. A chamada à API deve cessar quando a tentativa for bem sucedida (sucesso na Promise) ou quando o número de tentativas acabar. 
+
+A função terá os seguintes parâmetros:
+
+- função callback com uma chamada a uma API;
+
+- quantidade de tentativas;
+
+- delay entre cada tentativa.

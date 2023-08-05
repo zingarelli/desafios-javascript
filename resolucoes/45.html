@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 45</title>
+</head>
+
+<body>
+    <script>
+        const VALID_API = 'https://jsonplaceholder.typicode.com/todos/1';
+        const INVALID_API = 'http://localhost/error'
+
+        const fetchData = async(url) => {
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    return 'ok';
+                })
+                .catch(err => null);
+        }
+
+        const retry = (apiRequest, attempts, delay) => {
+            let data = null; 
+            let count = 0;
+            while (data === null && count < attempts) {               
+                setTimeout(async () => {
+                    data = await apiRequest();
+                    console.log(`Trying to fetch data from API...`)
+                }, delay)
+                count++;
+            }     
+        }
+
+
+        retry(() => fetchData(VALID_API), 1, 2000)
+        retry(() => fetchData(INVALID_API), 3, 2000)
+    </script>
+</body>
+
+</html>
