@@ -4,6 +4,10 @@ Aqui há uma série de desafios/exercícios propostos pelo Matheus Battisti em s
 
 A complexidade vai aumentando a cada desafio, começando dos fundamentos até chegar em temas mais avançados como manipulação de DOM e assincronismo.
 
+> 👉 Se quiser fazer uma revisão sobre JavaScript, recomendo [ler minhas anotações](https://github.com/zingarelli/anotacoes-estudo/blob/main/JavaScript.md). 
+
+> 👉 Tenho grande parte de minhas **anotações de estudo armazenadas em um repositório**, não só sobre JavaScript, como também outras tecnologias, como React, Next, Git, etc. Caso se interesse, dê uma olhada [neste link](https://github.com/zingarelli/anotacoes-estudo).
+
 ## Lista dos desafios
 
 Segue abaixo o que é pedido em cada desafio. Minha resolução para cada um também se encontra neste repositório, sendo que o nome de cada arquivo é referente ao número do desafio. 
